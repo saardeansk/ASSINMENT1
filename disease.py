@@ -1,10 +1,6 @@
 import cv2
 import numpy as np
 import datetime
-
-# --------------------------
-# STEP 1: Load Image
-# --------------------------
 image_path = 'leaf.jpg'  # replace with your leaf image
 image = cv2.imread(image_path)
 
