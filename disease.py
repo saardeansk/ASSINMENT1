@@ -20,9 +20,7 @@ mask = cv2.inRange(hsv, lower, upper)
 
 disease_ratio = (cv2.countNonZero(mask) / (image.size / 3)) * 100
 
-# --------------------------
-# STEP 4: Plant Database (Example)
-# --------------------------
+
 plants_info = {
     "Beech Tree": {
         "Scientific Name": "Fagus grandifolia",
@@ -44,15 +42,10 @@ plants_info = {
     }
 }
 
-# --------------------------
-# STEP 5: Select Plant
-# --------------------------
 plant_name = "Beech Tree"
 info = plants_info.get(plant_name, {})
 
-# --------------------------
-# STEP 6: Set Status and Date
-# --------------------------
+
 if disease_ratio > 15:
     status = "⚠ Diseased Leaf Detected"
 else:
@@ -60,8 +53,6 @@ else:
 
 today = datetime.datetime.now().strftime("%m/%d/%Y")
 
-# --------------------------
-# STEP 7: Print Report in Console
 # --------------------------
 print("-----------------------------------------")
 print("🌿 PLANT HEALTH REPORT")
@@ -75,17 +66,13 @@ print(f"Status: {status}")
 print(f"Date: {today}")
 print("-----------------------------------------")
 
-# --------------------------
-# STEP 8: Display on Image
-# --------------------------
+
 cv2.putText(image, f"Plant: {plant_name}", (20, 40), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0,255,0), 2)
 cv2.putText(image, f"Disease: {info.get('Possible Disease', 'Unknown')}", (20, 80), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,0,255), 2)
 cv2.putText(image, status, (20, 120), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255,255,255), 2)
 cv2.putText(image, f"Date: {today}", (20, 160), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255,255,0), 2)
 
-# --------------------------
-# STEP 9: Show Images
-# --------------------------
+
 cv2.imshow("Plant Disease Detection", image)
 cv2.imshow("Detected Disease Area", mask)
 
