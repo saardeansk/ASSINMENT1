@@ -13,9 +13,7 @@ image = cv2.resize(image, (600, 400))
 
 hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
-# --------------------------
-# STEP 3: Detect Disease (Color Spot Detection)
-# --------------------------
+
 lower = np.array([10, 40, 20])   # range for brown/yellow
 upper = np.array([30, 255, 255])
 mask = cv2.inRange(hsv, lower, upper)
