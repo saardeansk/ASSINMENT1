@@ -10,9 +10,7 @@ if image is None:
 
 image = cv2.resize(image, (600, 400))
 
-# --------------------------
-# STEP 2: Convert to HSV
-# --------------------------
+
 hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
 # --------------------------
