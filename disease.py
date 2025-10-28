@@ -37,7 +37,7 @@ plants_info = {
     "Tomato": {
         "Scientific Name": "Solanum lycopersicum",
         "Possible Disease": "Leaf Blight",
-        "Diagnosis": "Irregular brown spots with yellow borders; caused by fungal infection.",
+        "Diagnosis": "Irregular brown  spots with yellow borders; caused by fungal infection.",
         "Confidence": "92%"
     }
 }
