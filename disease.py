@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 import datetime
-image_path = 'leaf.jpg'  # replace with  your leaf image
+image_path = 'leaf.jpg'   # replace with  your leaf image
 image = cv2.imread(image_path)
 
 if image is None:
