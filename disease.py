@@ -5,7 +5,7 @@ image_path = 'leaf.jpg'   # replace with  your leaf image
 image = cv2.imread(image_path)
 
 if image is None:
-    print("Error: Image not  found! Check  your path.")
+    print("Error: Image not found! Check  your path.")
     exit()
 
 image = cv2.resize(image, (600, 400))
